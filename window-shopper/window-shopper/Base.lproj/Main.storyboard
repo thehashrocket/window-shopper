@@ -45,16 +45,44 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6G4-Zt-GCL">
+                                <rect key="frame" x="144" y="295" width="87" height="44.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5d-lH-C0B">
+                                <rect key="frame" x="162.5" y="344.5" width="49.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmb-uz-1la">
+                                <rect key="frame" x="117" y="601" width="140" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lxv-zg-Y4R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Sn9-1M-QKg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4gY-LD-lBR"/>
                             <constraint firstItem="HV5-Nh-KgN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8QX-YE-lFo"/>
                             <constraint firstItem="iBw-i6-DKU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ASd-Kk-azW"/>
+                            <constraint firstItem="n5d-lH-C0B" firstAttribute="top" secondItem="6G4-Zt-GCL" secondAttribute="bottom" constant="5" id="C5q-LV-DK1"/>
+                            <constraint firstItem="n5d-lH-C0B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CUZ-8f-hjo"/>
+                            <constraint firstItem="Tmb-uz-1la" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cek-Zq-czW"/>
                             <constraint firstItem="n71-2a-ULC" firstAttribute="trailing" secondItem="iBw-i6-DKU" secondAttribute="trailing" id="Gif-RF-kJ1"/>
                             <constraint firstItem="HV5-Nh-KgN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="M7t-Yx-8B9"/>
+                            <constraint firstItem="6G4-Zt-GCL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NSP-3h-zgL"/>
                             <constraint firstItem="HV5-Nh-KgN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="O8I-P5-1uH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iBw-i6-DKU" secondAttribute="trailing" constant="20" id="TVm-Do-2rx"/>
+                            <constraint firstItem="6G4-Zt-GCL" firstAttribute="top" secondItem="n71-2a-ULC" secondAttribute="bottom" constant="45" id="UFH-uN-7ow"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tmb-uz-1la" secondAttribute="bottom" constant="30" id="VWK-1D-Dfd"/>
                             <constraint firstItem="n71-2a-ULC" firstAttribute="leading" secondItem="iBw-i6-DKU" secondAttribute="leading" id="at2-Kw-rYD"/>
                             <constraint firstItem="Sn9-1M-QKg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="hDu-6v-D17"/>
                             <constraint firstItem="n71-2a-ULC" firstAttribute="top" secondItem="iBw-i6-DKU" secondAttribute="bottom" constant="25" id="kje-4z-Cjf"/>
@@ -64,7 +92,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="n5d-lH-C0B" id="i55-UF-iSS"/>
                         <outlet property="priceText" destination="n71-2a-ULC" id="qVR-Hg-Dnm"/>
+                        <outlet property="resultLbl" destination="6G4-Zt-GCL" id="6o8-h2-MYc"/>
                         <outlet property="wageText" destination="iBw-i6-DKU" id="nn2-vu-IYC"/>
                     </connections>
                 </viewController>
